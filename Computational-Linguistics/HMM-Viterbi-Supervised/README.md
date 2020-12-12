@@ -1,5 +1,10 @@
 ## POS-tagger using Hidden Markov Models and Viterbi Algorithm
 
+# TODO:
+- implement trigram tagger
+- update README
+- put HMM notes here 
+
 ### About
  
 In this code repo, a bigram part-of-speech tagger has been implemented using [Hidden Markov Model (HMM) and Viterbi Algorithm](https://web.stanford.edu/~jurafsky/slp3/A.pdf).
