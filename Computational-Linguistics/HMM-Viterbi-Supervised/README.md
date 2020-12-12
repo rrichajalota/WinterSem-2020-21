@@ -53,7 +53,7 @@ Or, simply make sure the following libraries are installed:
 #### For training and predicting the POS-tags 
 - in the default setting (i.e. with crude-smoothing and default filepaths)  -
 Simply, run `python main.py` and a tagged-output file will be generated at:  `outputs/de-tagged.tt`.  
-The output file, `outputs\de-tagged.tt`, will be in the CONLL format with test words in the first column and POS-tags in the second. 
+The output file, `outputs/de-tagged.tt`, will be in the CONLL format with test words in the first column and POS-tags in the second. 
 
 - Additional arguments that can be passed, are listed below: 
    ```
