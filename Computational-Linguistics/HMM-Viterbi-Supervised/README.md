@@ -1,9 +1,10 @@
 ## POS-tagger using Hidden Markov Models and Viterbi Algorithm
 
-# TODO:
-- implement trigram tagger
+# TODO (in the order of priority): 
 - update README
 - put HMM notes here 
+- implement trigram tagger
+- implement corpus reader for non-CONLL file formats (to directly input de-test.t)
 
 ### About
  
