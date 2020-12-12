@@ -1,0 +1,20 @@
+
+Comparing gold file "de-utb/de-eval.tt" and system file "outputs/smooth-0.4_de-tagged.tt"
+
+Precision, recall, and F1 score:
+
+  DET 0.7722 0.9801 0.8638
+ NOUN 0.9013 0.8953 0.8983
+ VERB 0.9055 0.8906 0.8979
+  ADP 0.8882 0.9852 0.9342
+    . 0.9437 0.9929 0.9676
+ CONJ 0.9676 0.8683 0.9153
+ PRON 0.8478 0.8076 0.8272
+  ADV 0.9081 0.7719 0.8345
+  ADJ 0.8081 0.6657 0.7300
+  NUM 0.9946 0.6778 0.8062
+  PRT 0.9403 0.8208 0.8765
+    X 1.0000 0.0455 0.0870
+
+Accuracy: 0.8881
+

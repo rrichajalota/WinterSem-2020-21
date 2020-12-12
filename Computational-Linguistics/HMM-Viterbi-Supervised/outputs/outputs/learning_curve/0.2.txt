@@ -1,0 +1,20 @@
+
+Comparing gold file "de-utb/de-eval.tt" and system file "outputs/vocab-size-0.2_de-tagged.tt"
+
+Precision, recall, and F1 score:
+
+  DET 0.9096 0.9741 0.9408
+ NOUN 0.7947 0.9821 0.8785
+ VERB 0.9537 0.8077 0.8747
+  ADP 0.9608 0.9769 0.9688
+    . 0.9983 0.9996 0.9990
+ CONJ 0.9498 0.8974 0.9228
+ PRON 0.9397 0.8253 0.8788
+  ADV 0.9261 0.7616 0.8359
+  ADJ 0.7638 0.5297 0.6256
+  NUM 0.9902 0.7481 0.8523
+  PRT 0.8818 0.8502 0.8657
+    X 0.6667 0.0909 0.1600
+
+Accuracy: 0.8941
+
