@@ -69,6 +69,7 @@ def write_tags_to_file(predicted_tags:list, test_file='./de-utb/de-test.t', tagg
             op_file.write(word+"\t"+tag+"\n")
     logging.info(f'tagged-file written to {tagged_file}')
 
+    
 if __name__ == '__main__':
     train_corpus = read_corpus()
     _, fD = extract_vocab_from_corpus(train_corpus, vocab_size=20000)
