@@ -1,0 +1,16 @@
+ prices !	False
+ availability show me .	False
+ way cheapest flight one .	False
+ indianapolis seattle to .	False
+ list trips round.	False
+ list flights saturday.	False
+ one fly i please ticket .	False
+ how far is it .	False
+ how is it far .	False
+ want i first class .	False
+ i class want first .	False
+
+
+---------------------
+
+Time taken by the parser when only_count is set to False: 0.017009735107421875
