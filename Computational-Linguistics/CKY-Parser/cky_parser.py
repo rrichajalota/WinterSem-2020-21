@@ -72,15 +72,15 @@ def cky_parser(words, grammar, grammar_dict, parser=False, draw_tree=False, only
 
                         for NT in NT_list: # backpointer information
                             chart[row][col][NT].append(((row, k, first_N), (k, col, second_N)))
-    if parser:
-        if only_count:
+    if parser is True:
+        if only_count is True:
             if grammar.start() not in chart[0][n].keys(): return 0
             else: return parse_tree(chart, 0, n, grammar.start(), only_count=only_count)
 
         elif grammar.start() in chart[0][n].keys(): # otherwise, compute all parse trees
             tree = parse_tree(chart, 0, n, grammar.start(), only_count=only_count)
 
-            if draw_tree:
+            if draw_tree is True:
                 return tree
 
             return len(tree)

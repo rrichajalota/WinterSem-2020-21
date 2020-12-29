@@ -1,0 +1,103 @@
+ prices .	True
+ show availability .	True
+ show the flights .	True
+ milwaukee to detroit .	True
+ indianapolis to seattle .	True
+ list round trips .	True
+ list saturday flights .	True
+ what aircraft is this .	False
+ list these economy fares .	False
+ list these city destinations .	False
+ what is the fare .	True
+ which flights are cheapest .	False
+ list flights from cleveland .	True
+ what are the costs .	True
+ can i have the fare .	True
+ what is e w r .	True
+ oakland to salt lake city .	True
+ show me northwest flights to detroit .	True
+ i want to leave before noon .	True
+ what flights leave boston to pittsburgh .	True
+ i 'd like an afternoon flight .	True
+ are any fares cheaper than these .	False
+ what is the flying time from .	False
+ which flights use a large plane .	True
+ what area does canadian airlines international service .	False
+ what flights leave las vegas to oakland .	True
+ show me the airlines and flight numbers .	True
+ what airlines fly from toronto to detroit .	True
+ which city is cheapest to fly into .	False
+ does delta fly to boston from denver .	True
+ what is the duration of this flight .	False
+ what flights leave los angeles arriving in minneapolis .	True
+ i can only spend a hundred fifty dollars .	False
+ i 'd like to leave on a saturday .	True
+ orlando to kansas city and then to minneapolis .	True
+ is there a flight from memphis to los angeles .	True
+ what if i wanted to leave on may fifth .	False
+ list u s air flights from dallas to boston .	True
+ i need a flight from philadelphia to westchester county .	True
+ what is the cheapest ticket from memphis to miami .	True
+ find a flight from washington d c to milwaukee .	True
+ find a flight from washington d c to montreal .	True
+ show american flights after twelve p.m. from miami to chicago .	False
+ how far is it from the airport to the city .	True
+ list those flights that stop over in salt lake city .	True
+ i want first class on flight one one one nine .	True
+ please show me all flights from montreal to las vegas .	True
+ i need the shortest evening flight from tampa to cincinnati .	True
+ how much is the fare limousine san francisco to downtown .	True
+ i need a flight from pittsburgh to newark on monday .	True
+ what meals are served on flight h p five four .	True
+ i 'll be leaving on a friday at four o'clock .	False
+ i 'd like to leave before eight o'clock at night .	True
+ please tell me the round trip cost for these flights .	True
+ i would like a flight from orlando to kansas city .	True
+ what is the cheapest one way flight from columbus to indianapolis .	True
+ count the number of flights between nine a.m. and twelve noon .	False
+ i need a flight from los angeles to minneapolis thursday afternoon .	True
+ please list flights departing from toronto canada to washington on saturday .	True
+ please list costs of round trip fares from denver to atlanta .	True
+ please give me a one way flight from washington to cincinnati .	True
+ does united flight four seven four slash fourteen eighty four serve dinner .	False
+ show me flights from detroit to san diego on tuesday may third .	False
+ i would like to find a flight from charlotte to las vegas .	True
+ the flight going to san diego from toronto should stop in denver .	False
+ show me flights from chicago to kansas city leaving around seven p.m. thursday .	True
+ can you tell me about the flights from saint petersburg to toronto again .	True
+ i would like to leave on thursday morning may fifth before six a.m .	False
+ i need a first class round trip airfare from detroit to saint petersburg .	True
+ how far is the airport from new york 's la guardia to downtown .	True
+ i 'd like to fly from buffalo to either orlando or long beach .	False
+ please list all flights from pittsburgh to toronto on nationair and canadian airlines international .	True
+ how long is the stop in dallas on flight d l nine thirty one .	True
+ please show me all first class flights from pittsburgh to newark on monday morning .	True
+ please show me all first class flights from indianapolis to memphis leaving monday morning .	True
+ please show me all flights from ontario to salt lake city leaving monday morning .	True
+ i need an american airlines flight number from chicago to philadelphia departing six p.m .	True
+ for american airlines i need round trip airfare from new york to san diego .	True
+ how much does a first class round trip ticket from detroit to saint petersburg cost .	True
+ what flights departing montreal have less than one hundred and fifty dollars round trip fare .	True
+ i need a flight from charlotte to las vegas that makes a stop in saint louis .	True
+ please show me the flights from chicago to detroit that arrive at six p.m. next tuesday .	True
+ what flights are available between chicago and indianapolis next wednesday between eleven a.m. and one p.m .	False
+ how many flights leave from lester b pearson international airport between nine a.m. and twelve noon .	False
+ how many times a day can i fly from boston to pittsburgh to newark to boston .	False
+ what flights do you have available on march twenty fourth leaving minneapolis arriving in seattle by .	False
+ how much does flight number a nineteen cost from new york to los angeles on monday morning .	True
+ i 'd like to fly out of chicago for less than a hundred fifty dollars round trip .	False
+ what type of aircraft is used on a flight from cleveland to dallas that leaves before noon .	True
+ what kind of aircraft is american 's flight fifteen oh one that departs at six fifty nine p.m .	False
+ how much does first class on that flight cost and how much does coach on that flight cost .	True
+ please book a one way coach fare from chicago to indianapolis on united flight two ninety two next wednesday .	False
+ please give me the number of flights that depart from lester b pearson international airport on april twenty fifth .	False
+ please list the flights leaving newark stopping over in seattle for approximately five hours and then on to san francisco .	True
+ i 'd like the cheapest round trip ticket from minneapolis to san diego arriving in san diego before seven p.m .	True
+ what is the cheapest first class ticket available flying from new york to miami one way but also round trip .	True
+ what is the cheapest one way flight from phoenix to san diego that arrives in the morning on thursday june second .	True
+ i 'd like to fly from indianapolis to houston on t w a and the plane should arrive around eleven a.m .	False
+
+
+---------------------
+
+Time taken by the parser when only_count is set to False: 25.048511266708374

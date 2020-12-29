@@ -14,7 +14,7 @@ logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 def arg_parser():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("parser", type=bool, default=True,
+    parser.add_argument("parser", default=True,
                         help="If set to False, CKY recognizer runs, i.e. the algorithm will only tell if a sentence is grammatical or not."
                              "To compute the number of parse trees or draw trees, set parser=True."
                              "Note: When parser=True, by default, the algorithm will compute all the parse trees to retrieve the number of parse trees."
@@ -55,7 +55,7 @@ def main():
     # optimiztaion step: build a dictionary out of CNF-grammar
     grammar_dict = build_grammar_dictionary(grammar)
 
-    if args.draw_trees:
+    if args.draw_trees is True:
         sys.stdout = open(output_file, 'w')
         for idx, sent in enumerate(test_sents):
             result = cky_parser(sent[0], grammar, grammar_dict, parser=args.parser, draw_tree=args.draw_trees,
@@ -71,6 +71,7 @@ def main():
                 continue
             if idx == 9: break
         sys.stdout.close()
+
     else:
         with open(output_file, 'w') as f:
             start = time()
