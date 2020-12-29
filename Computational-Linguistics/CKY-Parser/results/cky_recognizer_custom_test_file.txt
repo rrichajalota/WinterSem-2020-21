@@ -1,16 +1,16 @@
- prices !	False
- availability show me .	False
- way cheapest flight one .	False
- indianapolis seattle to .	False
- list trips round.	False
- list flights saturday.	False
- one fly i please ticket .	False
- how far is it .	False
- how is it far .	False
- want i first class .	False
- i class want first .	False
+ prices !	0
+ availability show me .	0
+ way cheapest flight one .	0
+ indianapolis seattle to .	0
+ list trips round.	0
+ list flights saturday.	0
+ one fly i please ticket .	0
+ how far is it .	0
+ how is it far .	0
+ want i first class .	0
+ i class want first .	0
 
 
 ---------------------
 
-Time taken by the parser when only_count is set to False: 0.017009735107421875
+Time taken by the parser when only_count is set to False: 0.01738905906677246

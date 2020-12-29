@@ -13,4 +13,4 @@
 
 ---------------------
 
-Time taken by the parser when only_count is set to True: 0.02327108383178711
+Time taken by the parser when only_count is set to True: 0.017503976821899414

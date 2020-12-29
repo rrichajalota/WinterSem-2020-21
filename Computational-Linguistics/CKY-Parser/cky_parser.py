@@ -29,7 +29,6 @@ def fetch_lhs(grammar_dict, rhs_tuple):
 
 
 def parse_tree(chart, row, col, sym, only_count=True):
-    start = time()
     backptr = chart[row][col][sym]
 
     # base condition - if string, we've reached a terminal.
@@ -82,7 +81,6 @@ def cky_parser(words, grammar, grammar_dict, parser=False, draw_tree=False, only
 
             if draw_tree is True:
                 return tree
-
             return len(tree)
 
         return 0

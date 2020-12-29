@@ -14,18 +14,18 @@ logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 def arg_parser():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("parser", default=True,
+    parser.add_argument("parser",type=bool, default=True,
                         help="If set to False, CKY recognizer runs, i.e. the algorithm will only tell if a sentence is grammatical or not."
                              "To compute the number of parse trees or draw trees, set parser=True."
                              "Note: When parser=True, by default, the algorithm will compute all the parse trees to retrieve the number of parse trees."
                              "Instead, to make the computation faster, also set --only_count=True.")
     parser.add_argument("--test", help='use this option to provide a file for testing the CKY parser.')
     parser.add_argument("--grammar", help="use this option to provide the CKY parser a grammar (file with '.cfg' extension)")
-    parser.add_argument("--draw_trees", default=False,
+    parser.add_argument("--draw_trees",
                         help="If specified, all possible parse trees are drawn for the first 10 input sentences. "
                              "Note: this option can only be used if '--only_count' is False(or not specified).", action="store_true")
     parser.add_argument("--output_file_path", help="provide filename or filepath for saving the output file.")
-    parser.add_argument("--only_count", default=False,
+    parser.add_argument("--only_count", default=False, type=bool,
                         help="If set to True, the algorithm simply counts the number of parse trees without actually computing all the parse trees. "
                              "Set this argument to True for faster computation."
                              "Note: if --draw_trees is specified, this argument MUST be set to False.")
@@ -58,6 +58,7 @@ def main():
     if args.draw_trees is True:
         sys.stdout = open(output_file, 'w')
         for idx, sent in enumerate(test_sents):
+            if idx == 10: break
             result = cky_parser(sent[0], grammar, grammar_dict, parser=args.parser, draw_tree=args.draw_trees,
                                 only_count=args.only_count)
             try:
@@ -65,11 +66,10 @@ def main():
                 for t in result:
                     Tree.fromstring(str(t)).pretty_print()
                 print("x--------------------------------------------------------------------------------------------x\n\n")
-
             except TypeError:
                 print(f"({idx})\t{' '.join(sent[0])}\t 0 parse trees.")
                 continue
-            if idx == 9: break
+
         sys.stdout.close()
 
     else:
@@ -82,9 +82,9 @@ def main():
 
 
 def check_input_args(args):
-    if not args.parser and (args.draw_trees or args.only_count):
+    if args.parser is False and (args.draw_trees or args.only_count):
         raise ValueError(f'Set parser to False!')
-    if args.draw_trees and args.only_count:
+    if args.draw_trees is True and args.only_count is True:
         raise ValueError(f'Both --draw_trees and --only_count cannot be set to True, simultaenously. See --help.')
 
 
