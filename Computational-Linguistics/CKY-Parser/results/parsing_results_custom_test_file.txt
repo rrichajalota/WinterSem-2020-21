@@ -1,0 +1,16 @@
+ prices !	0
+ availability show me .	0
+ way cheapest flight one .	0
+ indianapolis seattle to .	0
+ list trips round.	0
+ list flights saturday.	0
+ one fly i please ticket .	0
+ how far is it .	0
+ how is it far .	0
+ want i first class .	0
+ i class want first .	0
+
+
+---------------------
+
+Time taken by the parser when only_count is set to True: 0.02327108383178711

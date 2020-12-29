@@ -1,0 +1,278 @@
+(0)	prices .	2
+
+         SIGMA            
+    _______|________       
+NOUN_NNS       pt_char_per
+   |                |      
+ prices             .     
+
+         SIGMA            
+    _______|________       
+VERB_VBZ       pt_char_per
+   |                |      
+ prices             .     
+
+x--------------------------------------------------------------------------------------------x
+
+
+(1)	show availability .	3
+
+           SIGMA                    
+    _________|________               
+   |                 JWB            
+   |          ________|_______       
+NOUN_NN   AVPNP_NN       pt_char_per
+   |         |                |      
+  show  availability          .     
+
+         SIGMA                    
+   ________|________               
+  |                JXI            
+  |         ________|_______       
+NP_NN   NOUN_NN        pt_char_per
+  |        |                |      
+ show availability          .     
+
+           SIGMA                    
+    _________|________               
+   |                 JKA            
+   |          ________|_______       
+VERB_VB    NP_NN         pt_char_per
+   |         |                |      
+  show  availability          .     
+
+x--------------------------------------------------------------------------------------------x
+
+
+(2)	show the flights .	2
+
+               SIGMA                      
+    _____________|_______                  
+   |                    JKB               
+   |              _______|__________       
+   |           NP_NNS               |     
+   |       ______|_______           |      
+VERB_VB ADJ_AT        NOUN_NNS pt_char_per
+   |      |              |          |      
+  show   the          flights       .     
+
+               SIGMA                      
+    _____________|_______                  
+   |                    JKB               
+   |              _______|__________       
+   |           NP_NNS               |     
+   |       ______|_______           |      
+VERB_VB AVP_RB        NOUN_NNS pt_char_per
+   |      |              |          |      
+  show   the          flights       .     
+
+x--------------------------------------------------------------------------------------------x
+
+
+(3)	milwaukee to detroit .	2
+
+                  SIGMA                    
+     _______________|______                 
+    |                     KEX              
+    |                ______|_________       
+    |             PP_NP              |     
+    |         ______|______          |      
+ NOUN_NP  PREP_IN       NOUN_NP pt_char_per
+    |        |             |         |      
+milwaukee    to         detroit      .     
+
+                        SIGMA                        
+             _____________|____________               
+          NP_NP                       KFD            
+     _______|______               _____|_______       
+ NOUN_NP        PREP_IN       NOUN_NP     pt_char_per
+    |              |             |             |      
+milwaukee          to         detroit          .     
+
+x--------------------------------------------------------------------------------------------x
+
+
+(4)	indianapolis to seattle .	2
+
+                     SIGMA                    
+      _________________|______                 
+     |                       KEX              
+     |                  ______|_________       
+     |               PP_NP              |     
+     |           ______|______          |      
+  NOUN_NP    PREP_IN       NOUN_NP pt_char_per
+     |          |             |         |      
+indianapolis    to         seattle      .     
+
+                           SIGMA                        
+                _____________|____________               
+             NP_NP                       KFD            
+      _________|______               _____|_______       
+  NOUN_NP          PREP_IN       NOUN_NP     pt_char_per
+     |                |             |             |      
+indianapolis          to         seattle          .     
+
+x--------------------------------------------------------------------------------------------x
+
+
+(5)	list round trips .	11
+
+                SIGMA                       
+    ______________|________                  
+   |                      JWS               
+   |               ________|__________       
+   |          RELCL_VBZ               |     
+   |       _______|________           |      
+NOUN_NN NP_NN           VERB_VBZ pt_char_per
+   |      |                |          |      
+  list  round            trips        .     
+
+                SIGMA                      
+    ______________|_______                  
+   |                     JWL               
+   |               _______|__________       
+   |            PP_NNS               |     
+   |        ______|_______           |      
+NOUN_NN PREP_IN        NOUN_NNS pt_char_per
+   |       |              |          |      
+  list   round          trips        .     
+
+            SIGMA                         
+   ___________|______                      
+  |                 HYG                   
+  |      ____________|______               
+  |     |                  HYH            
+  |     |             ______|_______       
+NP_NN NP_NN       NOUN_NNS     pt_char_per
+  |     |            |              |      
+ list round        trips            .     
+
+              SIGMA                       
+   _____________|_____                     
+  |                  GLG                  
+  |       ____________|_____               
+  |      |                 GLH            
+  |      |             _____|_______       
+NP_NN VERB_VB       NP_NNS     pt_char_per
+  |      |            |             |      
+ list  round        trips           .     
+
+              SIGMA                      
+    ____________|_______                  
+   |                   JKB               
+   |             _______|__________       
+   |          NP_NNS               |     
+   |       _____|_______           |      
+VERB_VB NP_NN        NOUN_NNS pt_char_per
+   |      |             |          |      
+  list  round         trips        .     
+
+               SIGMA                      
+    _____________|_______                  
+   |                    JKB               
+   |              _______|__________       
+   |           NP_NNS               |     
+   |       ______|_______           |      
+VERB_VB AJP_JJ        NOUN_NNS pt_char_per
+   |      |              |          |      
+  list  round          trips        .     
+
+                SIGMA                      
+    ______________|_______                  
+   |                     JKK               
+   |               _______|__________       
+   |            PP_NNS               |     
+   |        ______|_______           |      
+VERB_VB PREP_IN        NOUN_NNS pt_char_per
+   |       |              |          |      
+  list   round          trips        .     
+
+                     SIGMA                         
+           ____________|_____________               
+        NP_NN                       KCD            
+    ______|_____               ______|_______       
+NOUN_NN       AJP_JJ       NOUN_NNS     pt_char_per
+   |            |             |              |      
+  list        round         trips            .     
+
+                       SIGMA                         
+           ______________|_____________               
+        NP_NN                         KCD            
+    ______|______                ______|_______       
+NOUN_NN       AVPNP_NN       NOUN_NNS     pt_char_per
+   |             |              |              |      
+  list         round          trips            .     
+
+                      SIGMA                         
+           _____________|_____________               
+        NP_NN                        KCD            
+    ______|______               ______|_______       
+NOUN_NN       PREP_IN       NOUN_NNS     pt_char_per
+   |             |             |              |      
+  list         round         trips            .     
+
+                    SIGMA                         
+         _____________|_____________               
+      NP_NN                        KCD            
+   _____|______               ______|_______       
+NP_NN       NOUN_NN       NOUN_NNS     pt_char_per
+  |            |             |              |      
+ list        round         trips            .     
+
+x--------------------------------------------------------------------------------------------x
+
+
+(6)	list saturday flights .	5
+
+                   SIGMA                       
+    _________________|________                  
+   |                         JWS               
+   |                  ________|__________       
+   |             RELCL_VBZ               |     
+   |        _________|________           |      
+NOUN_NN  NP_NP             VERB_VBZ pt_char_per
+   |       |                  |          |      
+  list  saturday           flights       .     
+
+                 SIGMA                        
+    _______________|______                     
+   |                     GXA                  
+   |        ______________|_____               
+   |       |                   GXB            
+   |       |               _____|_______       
+VERB_VB  NP_NP          NP_NNS     pt_char_per
+   |       |              |             |      
+  list  saturday       flights          .     
+
+                 SIGMA                      
+    _______________|_______                  
+   |                      JKB               
+   |                _______|__________       
+   |             NP_NNS               |     
+   |        _______|_______           |      
+VERB_VB  NP_NP          NOUN_NNS pt_char_per
+   |       |               |          |      
+  list  saturday        flights       .     
+
+                        SIGMA                         
+           _______________|_____________               
+        NP_NN                          KCD            
+    ______|_______                ______|_______       
+NOUN_NN       NAPPOS_NP       NOUN_NNS     pt_char_per
+   |              |              |              |      
+  list         saturday       flights           .     
+
+                     SIGMA                         
+         ______________|_____________               
+      NP_NP                         KCJ            
+   _____|______                ______|_______       
+NP_NN       NOUN_NP        NOUN_NNS     pt_char_per
+  |            |              |              |      
+ list       saturday       flights           .     
+
+x--------------------------------------------------------------------------------------------x
+
+
+(7)	what aircraft is this .	 0 parse trees.
+(8)	list these economy fares .	 0 parse trees.
+(9)	list these city destinations .	 0 parse trees.

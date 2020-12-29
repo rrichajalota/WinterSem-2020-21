@@ -15,7 +15,8 @@ class TestCKYParser(unittest.TestCase):
             B -> 'b'
             C -> 'a'
             """)
-        self.assertEqual(cky_parser(['b', 'a', 'a', 'b', 'a'], toy_gram, parser=True), 2)
+        toy_gram_dict = build_grammar_dictionary(toy_gram)
+        self.assertEqual(cky_parser(['b', 'a', 'a', 'b', 'a'], toy_gram, toy_gram_dict, parser=True), 2)
 
     def test_ungrammaticalSent_missingGrammar(self):
         grammar = nltk.CFG.fromstring("""
@@ -29,9 +30,10 @@ class TestCKYParser(unittest.TestCase):
             V -> 'shot' | 'ate'
             P -> 'in'
             """)
-        self.assertEqual(cky_parser('I shot an elephant in my pajamas'.split(), grammar, True), 2)
-        self.assertEqual(cky_parser('Mary shot an elephant in my pajamas'.split(), grammar, True), 0)
-        self.assertEqual(cky_parser('I shot an my pajamas'.split(), grammar, True), 0)
+        grammar_dict = build_grammar_dictionary(grammar)
+        self.assertEqual(cky_parser('I shot an elephant in my pajamas'.split(), grammar, grammar_dict, True), 2)
+        self.assertEqual(cky_parser('Mary shot an elephant in my pajamas'.split(), grammar, grammar_dict, True), 0)
+        self.assertEqual(cky_parser('I shot an my pajamas'.split(), grammar, grammar_dict, True), 0)
 
 if __name__ == '__main__':
     unittest.main()
