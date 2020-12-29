@@ -1,0 +1,12 @@
+../.idea/
+.goutputstream-3WLYV0
+.ipynb_checkpoints
+__pycache__/
+atis.zip
+atis/
+cl-a3.pdf
+generated_cnf_grammar.txt
+nltk_parser_results.txt
+own_gram_result.txt
+result.txt
+result_compute_trees.txt
