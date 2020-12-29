@@ -65,12 +65,11 @@ def main():
                 for t in result:
                     Tree.fromstring(str(t)).pretty_print()
                 print("x--------------------------------------------------------------------------------------------x\n\n")
-                if idx == 9:
-                    break
+
             except TypeError:
                 print(f"({idx})\t{' '.join(sent[0])}\t 0 parse trees.")
-                if idx == 9: break
-                else: continue
+                continue
+            if idx == 9: break
         sys.stdout.close()
     else:
         with open(output_file, 'w') as f:
