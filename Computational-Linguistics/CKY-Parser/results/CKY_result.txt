@@ -100,4 +100,4 @@
 
 ---------------------
 
-Time taken by the parser when only_count is set to False: 24.632071256637573
+Time taken by the parser when only_count is set to False: 24.5692880153656

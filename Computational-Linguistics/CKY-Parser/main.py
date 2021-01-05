@@ -5,6 +5,7 @@ This script runs the entire pipeline and provides a user-interface to change the
 import argparse
 import sys
 from nltk.draw.tree import draw_trees
+from cfg_conversion_module import *
 
 from cky_parser import *
 
@@ -14,21 +15,21 @@ logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 def arg_parser():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("parser",type=bool, default=True,
-                        help="If set to False, CKY recognizer runs, i.e. the algorithm will only tell if a sentence is grammatical or not."
-                             "To compute the number of parse trees or draw trees, set parser=True."
-                             "Note: When parser=True, by default, the algorithm will compute all the parse trees to retrieve the number of parse trees."
-                             "Instead, to make the computation faster, also set --only_count=True.")
+    parser.add_argument("--parser", dest='parser', default=False, action='store_true',
+                        help="If the argument is not specified, by default, CKY recognizer runs, i.e. the algorithm will only tell if a sentence is grammatical or not."
+                             "To compute the number of parse trees or draw trees, call './main.py --parser' or './main.py --parser --draw_trees', respectively."
+                             "Note: When --parser is set, by default, the algorithm will compute all the parse trees to retrieve the number of parse trees."
+                             "Instead, to make the computation faster, also set --only_count.")
     parser.add_argument("--test", help='use this option to provide a file for testing the CKY parser.')
     parser.add_argument("--grammar", help="use this option to provide the CKY parser a grammar (file with '.cfg' extension)")
-    parser.add_argument("--draw_trees",
+    parser.add_argument("--draw_trees", dest='draw_trees', default=False,
                         help="If specified, all possible parse trees are drawn for the first 10 input sentences. "
-                             "Note: this option can only be used if '--only_count' is False(or not specified).", action="store_true")
+                             "Note: this option can only be used if '--only_count' is False (i.e. not specified).", action="store_true")
     parser.add_argument("--output_file_path", help="provide filename or filepath for saving the output file.")
-    parser.add_argument("--only_count", default=False, type=bool,
-                        help="If set to True, the algorithm simply counts the number of parse trees without actually computing all the parse trees. "
-                             "Set this argument to True for faster computation."
-                             "Note: if --draw_trees is specified, this argument MUST be set to False.")
+    parser.add_argument("--only_count", default=False, dest='only_count', action='store_true',
+                        help="If specified, the algorithm simply counts the number of parse trees without actually computing all the parse trees. "
+                             "Set this argument for faster computation with --parser."
+                             "Note: if --draw_trees is specified, this argument MUST be set to False i.e. must not be specified.")
 
 
     args = parser.parse_args()
@@ -44,16 +45,17 @@ def main():
 
     grammar = load_file(filename=args.grammar) if args.grammar else load_file("./atis/atis-grammar-cnf.cfg")
     test_sents = load_file(filename=args.test) if args.test else load_file("./atis/atis-test-sentences.txt")
-    output_file = args.output_file_path if args.output_file_path else 'results/result_compute_trees.txt'
+    output_file = args.output_file_path if args.output_file_path else 'results/CKY_result.txt'
 
-    # TODO: check if the grammar is in chomsky_normal_form! if not, convert it to CNF and use that grammar instead. Also, save that grammar in results/
-
+    # TODO: check if the orig_grammar is in chomsky_normal_form! if not, convert it to CNF and use that orig_grammar instead. Also, save that orig_grammar in results/
 
     # check input
     check_input_args(args)
 
-    # optimiztaion step: build a dictionary out of CNF-grammar
+    # optimiztaion step: build a dictionary out of CNF-orig_grammar
     grammar_dict = build_grammar_dictionary(grammar)
+    logging.info(f'size of the CNF grammar look-up dictionary: {len(grammar_dict)}')
+    logging.info(f'args.parser: {args.parser}')
 
     if args.draw_trees is True:
         sys.stdout = open(output_file, 'w')

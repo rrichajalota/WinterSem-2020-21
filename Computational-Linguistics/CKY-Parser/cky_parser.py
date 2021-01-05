@@ -29,6 +29,20 @@ def fetch_lhs(grammar_dict, rhs_tuple):
 
 
 def parse_tree(chart, row, col, sym, only_count=True):
+    """
+    Given the chart, the cell location (row, col) and the symbol (or root node) contained in that cell, this function traces the backpointer
+    of the symbol to parse the (sub)tree headed by it. Returns either the number of (sub)trees or a list of tree paths.
+
+    Args:
+        chart: matrix with dim. n x (n+1), where n = number of words in the test sentence
+        row: index of the row of a cell
+        col: index of the col of a cell
+        sym: the value (terminal or non-terminal) contained in the cell
+        only_count: Boolean
+
+    Returns:
+        if only_count==True, returns int else returns a list of all parse trees
+    """
     backptr = chart[row][col][sym]
 
     # base condition - if string, we've reached a terminal.
@@ -54,6 +68,21 @@ def parse_tree(chart, row, col, sym, only_count=True):
 
 
 def cky_parser(words, grammar, grammar_dict, parser=False, draw_tree=False, only_count=True):
+    """
+    Args:
+        words: of a test sentence.
+        grammar: CFG grammar in Chomsky Normal Form.
+        grammar_dict: CFG grammar's lookup dictionary containing RHS of the production rules as key and LHS as value.
+        parser: determines whether to run the CKY algorithm as a Recognizer or as a Parser. When True, CKY parser is run.
+        draw_tree: Boolean type. Works only when only_count=False.
+        only_count: Boolean type. When true, doesn't compute all the parse trees.
+
+    Returns:
+        This fn. supports 3 return types depending on the values of the arguments.
+        - if parser==False, a Boolean value is returned. (i.e. Recognizer's output)
+        - if parser==True (also, optionally with only_count=True), an Integer value is returned. (i.e. number of parse trees)
+        - if parser==True and draw==True, the list of all the computed parse trees is returned as it is.
+    """
     n = len(words)
 
     chart = [[defaultdict(list) for j in range(n + 1)] for i in range(n)]
@@ -102,10 +131,10 @@ if __name__ == '__main__':
             break
     print(time()-start)
 
-    # gramma = nltk.data.load("./atis/atis-grammar-cnf.cfg")  # load the grammar
+    # orig_grammar = nltk.data.load("./atis/atis-orig_grammar-cnf.cfg")  # load the orig_grammar
     # s = nltk.data.load("./atis/atis-test-sentences.txt")  # load raw sentences
     # t = nltk.parse.util.extract_test_sentences(s)
-    # parser = nltk.parse.BottomUpChartParser(gramma)
+    # parser = nltk.parse.BottomUpChartParser(orig_grammar)
     # # parse all test sentences
     #
     # with open('nltk_parser_results.txt', 'w') as f:

@@ -96,3 +96,8 @@
  what is the cheapest first class ticket available flying from new york to miami one way but also round trip .	716
  what is the cheapest one way flight from phoenix to san diego that arrives in the morning on thursday june second .	1380
  i 'd like to fly from indianapolis to houston on t w a and the plane should arrive around eleven a.m .	0
+
+
+---------------------
+
+Time taken by the parser when only_count is set to True: 24.324450254440308
