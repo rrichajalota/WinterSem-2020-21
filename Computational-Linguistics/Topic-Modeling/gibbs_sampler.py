@@ -8,6 +8,7 @@ from collections import Counter, defaultdict
 import logging
 logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
+np.random.seed(123)
 
 def perform_lda(docs ,niterations, ntopics, num_word_types, alpha, beta):
     """
@@ -25,11 +26,12 @@ def perform_lda(docs ,niterations, ntopics, num_word_types, alpha, beta):
     #start = time()
     vocab_size = len(num_word_types)
 
-    word2topic: ndarray = np.zeros((vocab_size, ntopics), dtype=int)
-    doc2topic_count = np.zeros((len(docs), ntopics), dtype=int)
-    num_topics_in_doc = np.zeros((len(docs),), dtype=int)
-    num_topic_occurence = np.zeros((ntopics,), dtype=int)
+    word2topic: ndarray = np.zeros((vocab_size, ntopics), dtype=np.int32)
+    doc2topic_count = np.zeros((len(docs), ntopics), dtype=np.int32)
+    num_topics_in_doc = np.zeros((len(docs),), dtype=np.int32)
+    num_topic_occurence = np.zeros((ntopics,), dtype=np.int32)
     topic_assignment = [[None for _ in sent] for sent in docs]
+    topiclist = np.arange(ntopics)
 
     # ---- initiaization loop ----- #
     for m, doc in enumerate(docs):
@@ -41,9 +43,8 @@ def perform_lda(docs ,niterations, ntopics, num_word_types, alpha, beta):
             num_topics_in_doc[m] += 1
             word2topic[word][k] += 1
             num_topic_occurence[k] += 1
-    # end2 = time()
-    # logging.info(f'time taken for initialization: {end2-end1} secs.')
-    # gibbs sampling
+
+
     for _ in tqdm(range(0, niterations)):
         #start = time()
         for m, doc in enumerate(docs):
@@ -58,11 +59,12 @@ def perform_lda(docs ,niterations, ntopics, num_word_types, alpha, beta):
                 num_topic_occurence[topic] -= 1
 
                 # compute conditional probability
-                condprob_z = ((doc2topic_count[m, :] + alpha) * (word2topic[word, :] + beta)) /  ((num_topic_occurence + (beta * vocab_size)) * (num_topics_in_doc[m] + ntopics*alpha))
+                condprob_z = ((doc2topic_count[m, :] + alpha) * (word2topic[word, :] + beta)) /  \
+                             ((num_topic_occurence + (beta * vocab_size)) * (num_topics_in_doc[m] + ntopics*alpha))
                 condprob_z /= np.sum(condprob_z)
                 # p2 = time()
                 # logging.info(f'time taken to calc. condprob for one word: {p2-p1} secs')
-                topic = np.random.choice(np.arange(ntopics), p=condprob_z)
+                topic = np.random.choice(topiclist, p=condprob_z)
                 # p3 = time()
                 # logging.info(f'time taken to calc. new_topic for one word: {p3-p2} secs')
                 topic_assignment[m][n] = topic
@@ -78,8 +80,18 @@ def perform_lda(docs ,niterations, ntopics, num_word_types, alpha, beta):
 def arg_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument("--filepath", help='use this option to provide a file/corpus for topic modeling.')
-    parser.add_argument("--num_samples",
+    parser.add_argument("--num_samples", type=int,
                         help="use this option to state the number of samples to take from the given file")
+    parser.add_argument("--alpha", default=0.02, type=float,
+                        help="specify the hyperparameter for Dirichlet distribution. (default 0.02)")
+    parser.add_argument("--beta", default=0.1, type=float,
+                        help="specify the hyperparameter for Dirichlet distribution. (default 0.1)")
+    parser.add_argument("--niterations", type=int,
+                        default=500, help="num of iterations to run (default 500)")
+    parser.add_argument("--ntopics", type=int,
+                        default=20, help="num of topics to find (default 20)")
+    parser.add_argument("--show_words", type=int,
+                        default=40, help="number of most frequent words to show (default 40)")
     args = parser.parse_args()
     return args
 
@@ -95,22 +107,17 @@ def main():
     args = arg_parser()
 
     filepath = args.filepath if args.filepath else './moviespp.txt/movies-pp.txt'
-    num_samples = args.num_samples if args.num_samples else 2000
+    num_samples = args.num_samples if args.num_samples else None
 
     with open(filepath) as f:
         data = f.readlines() # read all 2000 lines
-        # data = ['play football holiday',
-        #         'I like watch football holiday',
-        #         'la liga match holiday',
-        #         'vehicle rightly advertised smooth silent',
-        #         'vehicle good pickup very comfortable drive',
-        #         'mileage vehicle around 14kmpl',
-        #         'vehicle 7 seater MPV generates 300 Nm torque with diesel engine']
+        logging.info(f'num_samples: {num_samples}')
+        if num_samples is not None:
+            data = data[:num_samples]
         docs = []
         num_word_types = Counter()
-        for i, sentence in tqdm(enumerate(data)):
+        for i, sentence in enumerate(data):
             if i == 0: continue
-            #if i == num_samples+1: break
             words = sentence.split()
             docs.append(words)
             for word in words:
@@ -119,13 +126,17 @@ def main():
         word_vocab = list(num_word_types.keys())
         word2id = assign_wordIDs(word_vocab)
 
-        logging.info(f'num_samples: {num_samples} \n num_uniq_words: {len(word_vocab)}')
+        logging.info(f'num_samples: {len(docs)} \n num_uniq_words: {len(word_vocab)}')
 
         # replace words from docs with word IDs
         docs = [[word2id[word] for word in wordlist] for wordlist in docs]
         num_word_types = {word2id[k]:v for k, v in num_word_types.items()}
 
-        topic_assignment, doc2topic_count, word2topic, num_topic_occurence = perform_lda(docs, niterations=500, ntopics=20, num_word_types=num_word_types, alpha=0.02, beta=0.1)
+        topic_assignment, doc2topic_count, word2topic, num_topic_occurence = perform_lda(docs,
+                                                                                         niterations=args.niterations,
+                                                                                         ntopics=args.ntopics,
+                                                                                         num_word_types=num_word_types,
+                                                                                         alpha=args.alpha, beta=args.beta)
 
         # print out words from each topic
         topic2word = word2topic.T
@@ -134,15 +145,7 @@ def main():
             for w, wc in enumerate(topic):
                 if wc!=0:
                     words_in_topic[word_vocab[w]] = wc
-            print(f'\n#---------------------------------------#\n Topic {t} \n {words_in_topic.most_common(25)}')
-
-
-
-
-
-
-
-
+            print(f'\n#---------------------------------------#\n Topic {t} \n {words_in_topic.most_common(args.show_words)}')
 
 
 if __name__ == '__main__':
