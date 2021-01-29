@@ -83,6 +83,20 @@ Depending on the size of the dataset and machine, the runtime varies.
 The runtimes have been elaborated further for each experiment file under the `results/` folder and also in the project report. 
 Except from the main experiment with default parameters, all other experimets have been performed on a machine of 8 GB and 8 cores. 
 
+## Some interesting observations/lessons learnt during the optimization process
+
+1) using `defaultdict(list)` for maintaining topic assignments works faster than using a variable 2D python `list` or `defaultdict(int)`.  The runtime reduced by approximately **4+ secs per iteration** when the variable 2D vector data structure for topic assignments was replaced by `defaultdict(...)`. There was also a reduction in the initialization runtime by the same factor. 
+The difference between `defaultdict(int)` and `defaultdict(list)` for topic assignment is not very significant and might also be system dependent (to be checked). But results from the experiments on my machine are as follows: 
+```
+ For defaultdict[tuple] = int assignment, initialization took 3.42 secs and 33.64 secs/iteration.
+ 
+ For defaultdict[int] = [topic1, topic2,..] assignment, initialization took 3.23 secs and 32.21 secs/ iteration. 
+ ```
+
+2) using `np.zeros(shape, dtype=int)` is faster than `np.zeros(shape, dtype=np.int32/np.int16)` and `np.zeros(shape)` is the fastest. There was a significant reduction in initialization runtime from **8+ secs to 3+ secs** and **10+secs/iteration** when `np.zeros(shape, dtype=np.int32/np.int16)` was replaced with `np.zeros(shape, dtype=int)`. With `np.zeros(shape)`, the reduction was of around 1-2 secs/iteration, with no visible reduction in initialization runtime. 
+
+Both of these observations were made on the default settings with 2000 sentences of the movie review corpus. 
+
 
 ## For extra credit:
 - The code has been optimized using numpy.   
