@@ -1,0 +1,15 @@
+iterations 1000, topics 3, top_words 20
+num_samples being used: 953, num_unique_words: 2370
+Runtime of the experiment: 8 mins 33 secs, 1.95 secs/iteration
+
+#---------------------------------------#
+ Topic 0
+ [('chile', 319.0), ('hquake', 257.0), ('tsunami', 84.0), ('magnitude', 64.0), ('hern', 55.0), ('coast', 54.0), ('quake', 47.0), ('strikes', 34.0), ('powerful', 31.0), ('dead', 27.0), ('hit', 25.0), ('people', 22.0), ('iquique', 21.0), ('warning', 21.0), ('news', 17.0), ('via', 15.0), ('chileea', 15.0), ('hits', 15.0), ('massive', 13.0), ('ale', 13.0)]
+
+#---------------------------------------#
+ Topic 1
+ [('fires', 184.0), ('australia', 150.0), ('fire', 103.0), ('nswfires', 103.0), ('nsw', 101.0), ('bush', 68.0), ('sydney', 54.0), ('safe', 33.0), ('amp', 32.0), ('south', 32.0), ('thoughts', 28.0), ('new', 27.0), ('wales', 25.0), ('climate', 23.0), ('stay', 23.0), ('bushfires', 23.0), ('photo', 20.0), ('affected', 20.0), ('fighting', 18.0), ('state', 18.0)]
+
+#---------------------------------------#
+ Topic 2
+ [('nswfires', 200.0), ('fire', 110.0), ('nswrfs', 68.0), ('nsw', 59.0), ('sydney', 47.0), ('fires', 46.0), ('emergency', 27.0), ('rfs', 26.0), ('blue', 25.0), ('bushfires', 23.0), ('bushfire', 22.0), ('amp', 22.0), ('springwood', 22.0), ('smoke', 19.0), ('today', 18.0), ('update', 18.0), ('mountains', 16.0), ('warning', 16.0), ('live', 16.0), ('burning', 15.0)]

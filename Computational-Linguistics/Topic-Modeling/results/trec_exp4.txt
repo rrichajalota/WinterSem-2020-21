@@ -1,0 +1,39 @@
+python3 gibbs_sampler.py --filepath pptweets_chileEarthquake2014_australiaBushfire2013.txt --include_first_line --niterations 700 --ntopics 7 > trec_exp4.txt
+2021-01-29 06:36:41,805 - filepath: pptweets_chileEarthquake2014_australiaBushfire2013.txt
+specified num_samples: None
+include_first_line: True
+alpha: 0.02
+beta: 0.1
+number of interations: 700
+num topics to find: 7
+num words to show per topic: 40
+2021-01-29 06:36:41,807 - num_samples being used: 953    num_unique_words: 2370
+2021-01-29 06:36:41,852 - time taken to initialize counts: 0.04369068145751953 secs.
+total runtime - 5:03 mins, 2.31 secs/iteration
+#---------------------------------------#
+ Topic 0 
+ [('chile', 313.0), ('hquake', 257.0), ('tsunami', 84.0), ('magnitude', 64.0), ('hern', 56.0), ('coast', 56.0), ('quake', 46.0), ('strikes', 34.0), ('powerful', 31.0), ('dead', 26.0), ('hit', 24.0), ('warning', 21.0), ('iquique', 21.0), ('people', 19.0), ('chileea', 15.0), ('hits', 15.0), ('massive', 14.0), ('news', 14.0), ('via', 13.0), ('tarapaca', 12.0), ('five', 12.0), ('ale', 12.0), ('kills', 12.0), ('struck', 11.0), ('second', 11.0), ('april', 10.0), ('aftershocks', 10.0), ('rocks', 10.0), ('apr', 10.0), ('video', 10.0), ('least', 10.0), ('peru', 10.0), ('another', 9.0), ('waves', 9.0), ('wall', 9.0), ('new', 9.0), ('repo', 9.0), ('offshore', 9.0), ('pacific', 9.0), ('near', 9.0)]
+
+#---------------------------------------#
+ Topic 1 
+ [('nsw', 38.0), ('fires', 35.0), ('fire', 27.0), ('nswfires', 24.0), ('australia', 24.0), ('climate', 19.0), ('change', 15.0), ('fighting', 13.0), ('abbott', 12.0), ('breaking', 11.0), ('auspol', 11.0), ('sending', 10.0), ('love', 10.0), ('tony', 8.0), ('plane', 8.0), ('beautiful', 8.0), ('hea', 7.0), ('one', 7.0), ('places', 7.0), ('images', 7.0), ('ever', 6.0), ('record', 6.0), ('conditions', 6.0), ('climatechange', 6.0), ('minister', 5.0), ('worst', 5.0), ('world', 5.0), ('weather', 5.0), ('wild', 5.0), ('government', 5.0), ('said', 4.0), ('also', 4.0), ('pilot', 4.0), ('bushfires', 4.0), ('crashes', 4.0), ('way', 4.0), ('prime', 4.0), ('sydney', 4.0), ('burnt', 4.0), ('photos', 4.0)]
+
+#---------------------------------------#
+ Topic 2 
+ [('fires', 66.0), ('nswfires', 55.0), ('nsw', 49.0), ('safe', 33.0), ('sydney', 31.0), ('thoughts', 29.0), ('stay', 24.0), ('amp', 23.0), ('bush', 22.0), ('fire', 21.0), ('prayers', 19.0), ('everyone', 18.0), ('affected', 17.0), ('amazing', 16.0), ('people', 16.0), ('please', 15.0), ('photo', 13.0), ('hope', 12.0), ('like', 11.0), ('would', 10.0), ('today', 10.0), ('sky', 9.0), ('prayforchile', 9.0), ('bushfires', 8.0), ('home', 8.0), ('best', 8.0), ('great', 8.0), ('right', 7.0), ('state', 7.0), ('rain', 7.0), ('work', 7.0), ('donate', 7.0), ('tonight', 6.0), ('wishes', 6.0), ('well', 6.0), ('praying', 6.0), ('nswbushfires', 6.0), ('family', 6.0), ('keep', 6.0), ('fighters', 6.0)]
+
+#---------------------------------------#
+ Topic 3 
+ [('australia', 59.0), ('fires', 52.0), ('fire', 50.0), ('sydney', 36.0), ('nswfires', 29.0), ('bush', 19.0), ('could', 13.0), ('firefighters', 12.0), ('weather', 12.0), ('mountains', 11.0), ('bushfire', 10.0), ('blue', 10.0), ('news', 10.0), ('smoke', 10.0), ('set', 10.0), ('australian', 9.0), ('bushfires', 9.0), ('worsen', 9.0), ('winds', 9.0), ('warn', 8.0), ('fears', 8.0), ('blaze', 8.0), ('high', 8.0), ('danger', 7.0), ('merge', 7.0), ('ant', 7.0), ('strong', 7.0), ('wildfires', 7.0), ('impo', 7.0), ('sta', 7.0), ('nsw', 7.0), ('threat', 7.0), ('burning', 7.0), ('crisis', 6.0), ('control', 6.0), ('hot', 6.0), ('via', 6.0), ('mega', 5.0), ('bluemountains', 5.0), ('wales', 5.0)]
+
+#---------------------------------------#
+ Topic 4 
+ [('fires', 65.0), ('australia', 62.0), ('nsw', 33.0), ('south', 28.0), ('bush', 28.0), ('nswfires', 27.0), ('new', 25.0), ('wales', 20.0), ('emergency', 20.0), ('fire', 18.0), ('homes', 15.0), ('state', 15.0), ('across', 11.0), ('least', 11.0), ('eastern', 10.0), ('raging', 10.0), ('declared', 9.0), ('rage', 9.0), ('bushfires', 8.0), ('amp', 8.0), ('news', 8.0), ('rfs', 8.0), ('photo', 8.0), ('including', 7.0), ('via', 6.0), ('info', 5.0), ('scores', 5.0), ('early', 5.0), ('image', 5.0), ('line', 5.0), ('worst', 5.0), ('blazing', 5.0), ('burnt', 5.0), ('firefighter', 5.0), ('officials', 5.0), ('aircraft', 5.0), ('premier', 5.0), ('australian', 4.0), ('scorch', 4.0), ('satellite', 4.0)]
+
+#---------------------------------------#
+ Topic 5 
+ [('fire', 78.0), ('nswfires', 68.0), ('nswrfs', 32.0), ('amp', 26.0), ('sydney', 22.0), ('emergency', 19.0), ('nsw', 17.0), ('warning', 15.0), ('area', 11.0), ('due', 10.0), ('ale', 10.0), ('crews', 9.0), ('springwood', 9.0), ('watch', 9.0), ('park', 9.0), ('bushfire', 8.0), ('day', 8.0), ('act', 8.0), ('total', 8.0), ('road', 8.0), ('danger', 7.0), ('greater', 7.0), ('southern', 7.0), ('olympic', 7.0), ('hall', 7.0), ('water', 7.0), ('extreme', 6.0), ('illawarra', 6.0), ('update', 6.0), ('state', 6.0), ('centre', 6.0), ('bans', 6.0), ('good', 6.0), ('burning', 6.0), ('tomorrow', 6.0), ('place', 6.0), ('lithgow', 5.0), ('picton', 5.0), ('linksview', 5.0), ('hawkesbury', 5.0)]
+
+#---------------------------------------#
+ Topic 6 
+ [('nswfires', 97.0), ('nswrfs', 39.0), ('fire', 19.0), ('bushfires', 17.0), ('nsw', 16.0), ('springwood', 14.0), ('blue', 13.0), ('rfs', 13.0), ('bushfire', 12.0), ('fires', 12.0), ('live', 12.0), ('today', 12.0), ('firefighters', 11.0), ('homes', 10.0), ('nswbushfires', 10.0), ('help', 10.0), ('commissioner', 10.0), ('smoke', 9.0), ('please', 8.0), ('home', 8.0), ('sydney', 8.0), ('suppo', 8.0), ('sydneyfires', 8.0), ('shane', 7.0), ('call', 7.0), ('affected', 7.0), ('need', 7.0), ('thanks', 7.0), ('says', 7.0), ('fitzsimmons', 7.0), ('lost', 7.0), ('conditions', 7.0), ('get', 7.0), ('lithgow', 6.0), ('near', 6.0), ('around', 6.0), ('winmalee', 6.0), ('latest', 6.0), ('tomorrow', 6.0), ('media', 6.0)]

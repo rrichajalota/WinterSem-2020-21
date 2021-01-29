@@ -1,0 +1,53 @@
+python3 gibbs_sampler.py --num_samples 1001 --ntopics 12 --niterations 250 --alpha=1 --beta=0.5 --show_words 40 > exp3.txt
+2021-01-28 07:28:35,293 - num_samples: 1001
+1001it [00:00, 6657.49it/s]
+2021-01-28 07:28:35,452 - num_samples: 1001
+ num_uniq_words: 32015
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 250/250 [1:30:43<00:00, 17.14s/it]
+#---------------------------------------#
+ Topic 0 
+ [('scream', 30), ('francis', 28), ('thompson', 20), ('terry', 19), ('cox', 18), ('3', 16), ('forest', 14), ('carl', 14), ('gilliam', 13), ('howie', 12), ('sidney', 12), ('dwayne', 12), ('seth', 11), ('babe', 11), ('cell', 10), ('acid', 10), ('pig', 9), ('burly', 9), ('craven', 9), ('suzie', 8), ('raoul', 8), ('jjaks', 8), ('ghostface', 8), ('fishes', 8), ('abigail', 7), ('forsythe', 7), ('fairy', 7), ('yahoo', 7), ('catharine', 7), ('minnesota', 7), ('potter', 7), ('loathing', 6), ('australia', 6), ('stab', 6), ('duke', 6), ('einstein', 6), ('nazis', 6), ('horta', 6), ('commandments', 6), ('cried', 6)]
+
+#---------------------------------------#
+ Topic 1 
+ [('alien', 79), ('apes', 53), ('rising', 53), ('species', 51), ('planet', 40), ('humans', 33), ('park', 32), ('patrick', 32), ('verhoeven', 29), ('ape', 28), ('troopers', 28), ('leo', 26), ('sphere', 26), ('hammer', 24), ('joe', 23), ('gorilla', 23), ('ship', 22), ('battlefield', 22), ('mercury', 22), ('1900', 21), ('hughes', 21), ('earth', 19), ('monster', 19), ('dalmatians', 18), ('psychlos', 18), ('bugs', 17), ('deep', 17), ('psychlo', 17), ('hammond', 17), ('mandingo', 17), ('eve', 16), ('heston', 16), ('starship', 15), ('slave', 15), ('henstridge', 14), ('terl', 14), ('baker', 13), ('survivors', 13), ('burton', 13), ('geronimo', 13)]
+
+#---------------------------------------#
+ Topic 2 
+ [('seagal', 72), ('spawn', 71), ('damme', 60), ('van', 57), ('knock', 31), ('franklin', 23), ('schneider', 22), ('kelly', 20), ('sammy', 19), ('jean-claude', 18), ('bye', 18), ('al', 17), ('deuce', 17), ('stalked', 16), ('tsui', 16), ('ned', 16), ('simmons', 14), ('pimp', 13), ('leguizamo', 12), ('lomax', 12), ('milton', 12), ('hong', 11), ('wanda', 11), ('muresan', 11), ('pimps', 11), ('bont', 11), ('luc', 11), ('yang', 11), ('tucker', 10), ('taiwan', 10), ('rodman', 9), ('sheen', 9), ('rochon', 9), ('siege', 9), ('conscience', 9), ('mcfarlane', 9), ('jia-li', 9), ('kong', 8), ('wong', 8), ('jeans', 8)]
+
+#---------------------------------------#
+ Topic 3 
+ [('8mm', 37), ('54', 34), ('welles', 31), ('schumacher', 29), ('connor', 23), ('shane', 22), ('phillippe', 22), ('loser', 21), ('myers', 20), ('heckerling', 20), ('data', 19), ('karen', 18), ('snuff', 17), ('cruel', 17), ('intentions', 16), ('rubell', 15), ('dora', 15), ('trek', 14), ('insurrection', 14), ('mccoy', 14), ('kenneth', 13), ('zach', 13), ('disco', 12), ('sid', 12), ('pornography', 11), ('paul', 10), ('phoenix', 10), ('carry', 9), ('picard', 9), ('_54_', 9), ('sebastian', 9), ('valmont', 9), ('dance', 8), ('devil', 8), ('jacques', 8), ('modine', 8), ('jasmine', 8), ('schmidt', 8), ('ferrara', 8), ('jermaine', 8)]
+
+#---------------------------------------#
+ Topic 4 
+ [('jackie', 45), ('chan', 43), ('kong', 33), ('league', 32), ('li', 31), ('hong', 30), ('jakob', 27), ('magoo', 27), ('baseball', 22), ('jet', 21), ('fight', 20), ('arts', 19), ('wire', 19), ('musketeer', 17), ('libby', 17), ('powder', 15), ('varsity', 15), ("d'artagnan", 14), ('chinese', 14), ('watchers', 14), ('musketeers', 13), ('matrix', 13), ('china', 13), ('lucy', 13), ('pamela', 13), ('liu', 12), ('com', 12), ('violin', 12), ('roth', 11), ('chambers', 11), ('paris', 11), ('mortal', 11), ('kombat', 11), ('granger', 11), ('switchback', 11), ('lacrosse', 11), ('liar', 11), ('reborn', 11), ('barb', 11), ('gus', 11)]
+
+#---------------------------------------#
+ Topic 5 
+ [('film', 4256), ('movie', 3172), ('one', 2635), ('like', 1831), ('even', 1378), ('would', 1181), ('good', 1125), ('time', 1109), ('get', 1036), ('bad', 1018), ('much', 996), ('character', 923), ('story', 913), ('could', 896), ('plot', 878), ('characters', 869), ('two', 863), ('make', 817), ('first', 805), ('really', 777), ('see', 773), ('also', 764), ('way', 752), ('little', 718), ('well', 697), ('people', 658), ('scene', 656), ('never', 643), ('films', 639), ('know', 638), ('scenes', 631), ('action', 604), ('man', 598), ('director', 593), ('new', 557), ('movies', 556), ('another', 549), ('made', 537), ('big', 532), ('go', 530)]
+
+#---------------------------------------#
+ Topic 6 
+ [('king', 61), ('wrestling', 50), ('joan', 33), ('wcw', 28), ('besson', 24), ('arquette', 22), ('`the', 18), ('anna', 15), ('messenger', 15), ('gordie', 15), ('chucky', 14), ('sinclair', 13), ('bischoff', 13), ('wrestlers', 13), ('jovovich', 12), ('frankie', 11), ('page', 11), ('gordy', 11), ('sean', 10), ('historical', 10), ('plastic', 10), ('leon', 10), ('skulls', 10), ('alessa', 10), ('carey', 9), ('aberdeen', 9), ('epic', 9), ('rumble', 9), ('arc', 9), ('nitro', 9), ('jimmy', 8), ('platt', 8), ('bride', 8), ('billie', 8), ('titus', 8), ('stigmata', 8), ('bunz', 8), ('matilda', 8), ('throne', 7), ('vince', 7)]
+
+#---------------------------------------#
+ Topic 7 
+ [('godzilla', 114), ('wild', 55), ('smith', 51), ('lynch', 45), ('vampires', 44), ('vampire', 42), ('west', 40), ('carpenter', 35), ('crow', 34), ('broderick', 33), ('squad', 27), ('kline', 27), ('gordon', 24), ('dune', 18), ('blade', 17), ('emmerich', 17), ('mayor', 16), ('narration', 15), ('lizard', 14), ('dick', 14), ('grinch', 14), ('rimbaud', 13), ('osmosis', 13), ('japanese', 12), ('butcher', 12), ('loveless', 12), ('jurassic', 12), ('danes', 11), ('epps', 11), ('nuclear', 11), ('twin', 11), ('reno', 11), ('peaks', 11), ('poetry', 11), ('creature', 10), ('audrey', 10), ('maria', 10), ('kitty', 10), ('hayek', 10), ('branagh', 10)]
+
+#---------------------------------------#
+ Topic 8 
+ [('batman', 102), ('eddie', 86), ('murphy', 85), ('alicia', 38), ('freeze', 32), ('robin', 29), ('betty', 27), ('webb', 27), ('metro', 26), ("o'donnell", 24), ('keaton', 24), ('kudrow', 24), ('schumacher', 22), ('ivy', 22), ('jimmie', 20), ('thurman', 20), ('blonde', 19), ('silverstone', 19), ('poison', 19), ('g', 18), ('alfred', 18), ('hills', 18), ('matthau', 17), ('holy', 17), ('bachelor', 17), ('harlem', 17), ('ricky', 17), ('soap', 16), ('zellweger', 16), ('avengers', 16), ('beverly', 16), ('finn', 16), ('arkin', 15), ('uma', 15), ('darryl', 15), ('clooney', 14), ('wayans', 14), ('sisters', 13), ('crystal', 13), ('gwen', 13)]
+
+#---------------------------------------#
+ Topic 9 
+ [('harry', 116), ('nbsp', 58), ('x-files', 28), ('noir', 26), ('porter', 24), ('carter', 20), ('gal', 20), ('momma', 20), ('palmetto', 19), ('mona', 17), ('kersey', 17), ('kingsley', 15), ('shandling', 15), ('paulie', 15), ('shue', 14), ('bronson', 13), ('mia', 13), ('griffin', 13), ('kim', 13), ('heyst', 13), ('boorman', 13), ('murray', 12), ('donnie', 12), ('harrelson', 11), ('dafoe', 11), ('bowling', 11), ('roy', 10), ('wigand', 10), ('brasco', 10), ('zardoz', 10), ('scale', 9), ('henry', 9), ('ellie', 9), ('elisabeth', 9), ('tobacco', 9), ('conrad', 9), ('amish', 9), ('garry', 9), ('diaries', 9), ('television', 8)]
+
+#---------------------------------------#
+ Topic 10 
+ [('jolie', 38), ('warrior', 30), ('banderas', 30), ('tribe', 29), ('jawbreaker', 29), ('krippendorf', 28), ('liz', 25), ('perry', 23), ('darren', 22), ('melvin', 20), ('supergirl', 18), ('lucas', 17), ('cisco', 17), ('lara', 17), ('13th', 16), ('superman', 16), ('silverman', 16), ('farley', 16), ('warriors', 16), ('tomb', 16), ('raider', 16), ('luis', 15), ('ahmed', 15), ('dreyfuss', 15), ('mcgowan', 14), ('buster', 14), ('memphis', 14), ('judith', 14), ('sword', 13), ('blues', 13), ('angelina', 13), ('oz', 13), ('mctiernan', 13), ('gayheart', 13), ('elwood', 13), ('courtney', 13), ('kip', 12), ('rebecca', 12), ('fern', 12), ('nine', 11)]
+
+#---------------------------------------#
+ Topic 11 
+ [('mars', 104), ('mission', 64), ('tarzan', 49), ('space', 33), ('carpenter', 24), ('palma', 24), ('ghosts', 23), ('cruise', 22), ('armageddon', 21), ('nasa', 21), ('sinise', 20), ('martian', 17), ('alice', 17), ('de', 17), ('astronaut', 17), ('bilko', 17), ('jerry', 16), ('robbins', 16), ('sgt', 15), ('caulder', 14), ('kubrick', 13), ('luc', 13), ('africa', 12), ('march', 12), ('jane', 11), ('cube', 11), ('corky', 11), ('assault', 10), ('rescue', 10), ('depalma', 10), ("o'connell", 10), ('tyler', 10), ('asteroid', 10), ('oil', 10), ('13', 9), ('odyssey', 9), ('powell', 9), ('liv', 9), ('nielsen', 9), ('macleane', 9)]
