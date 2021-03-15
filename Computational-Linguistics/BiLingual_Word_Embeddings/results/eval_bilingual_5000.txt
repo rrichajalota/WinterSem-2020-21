@@ -1,0 +1,5 @@
+# --- on custom datasets ---
+Pearson Correlation score: (-0.14880317384291328, 0.5431978079167704)
+total pairs: 20 oov pairs: 1
+
+Analogy Correct predictions: 0 out of 8. 3 oov pairs not considered.
