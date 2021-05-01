@@ -1,0 +1,1 @@
+ALl the jupyter notebooks are self-contained, meaning they can be run indpendently on [Google Collab](https://colab.research.google.com/notebooks/welcome.ipynb#scrollTo=-Rh3-Vt9Nev9). The Multi30k dataset and all the libraries that are needed to run the notebook would be downloaded automatically. 
